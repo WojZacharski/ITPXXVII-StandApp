@@ -5,6 +5,11 @@ import { Logger } from '../utils/logger';
 export const DataContext = React.createContext(null);
 export const useDataContext = () => React.useContext(DataContext);
 
+const API_URL = process.env.REACT_APP_API_URL;
+
+if (!API_URL) {
+    console.error('API_URL is undefined. Please check your .env file.');
+}
 // Component to handle stand backend data
 class DataProvider extends Component {
     state = {
@@ -38,28 +43,30 @@ class DataProvider extends Component {
     }
 
     fetchData = async () => {
+
         try {
-            Logger('Fetching token data from backend');
+
+            Logger('Fetching token data from ' + API_URL);
             // @kerdamon
-            const tokenDataResponse = await fetch(`https://stand-api.best.krakow.pl/api/fetchData/${this.token}`);
+            const tokenDataResponse = await fetch(`${API_URL}/api/fetchData/${this.token}`);
             if (tokenDataResponse.ok) {
                 const tokenData = await tokenDataResponse.json();
                 this.setState({ tokenData });
             } else {
                 this.setState({ wrongToken: true });
             }
-            Logger('Fetching reserved stands data from backend');
+            Logger('Fetching reserved stands data from ' + API_URL);
             // @kerdamon
-            const reservedStandsResponse = await fetch('https://stand-api.best.krakow.pl/api/fetchReservedStands');
+            const reservedStandsResponse = await fetch(`${API_URL}/api/fetchReservedStands`);
             if (reservedStandsResponse.ok) {
                 const reservedStands = await reservedStandsResponse.json();
                 this.setState({ reservedStands, isLoading: false });
                 this.resolveStatus();
             } else {
-                console.error('Error fetchinbg reserved stands data:', reservedStandsResponse.statusText);
+                console.error('Error fetching reserved stands data:', reservedStandsResponse.statusText);
             }
         } catch (error) {
-            console.error('Error fetching data from backend:', error);
+            console.error('Error fetching data from ' + API_URL, error);
         }
     };
 
@@ -81,10 +88,11 @@ class DataProvider extends Component {
 
     saveChoice = async () => {
         const { id } = this.state;
+        const API_URL = process.env.REACT_APP_API_URL;
         try {
-            Logger('Saving stand choice to backend');
+            Logger('Saving stand choice to ' + API_URL);
             // @kerdamon
-            const response = await fetch('https://stand-api.best.krakow.pl/api/saveData', {
+            const response = await fetch(`${API_URL}/api/saveData`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -100,10 +108,10 @@ class DataProvider extends Component {
                 // Choice saved successfully
                 console.log('Data has been saved. Reserved Stands and Tokens updated.')
             } else {
-                console.error('Error posting message to /saveData:', response.statusText);
+                console.error('Error posting message to ' + API_URL + '/saveData:', response.statusText);
             }
         } catch (error) {
-            console.error('Error saving choice to backend:', error);
+            console.error('Error saving choice to ' + API_URL, error);
         }
     };
 

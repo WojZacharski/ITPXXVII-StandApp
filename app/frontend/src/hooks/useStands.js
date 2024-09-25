@@ -6,7 +6,7 @@ export const useStands = () => {
   const [loading, setLoading] = React.useState(true);
   const [stands, setStands] = React.useState([]);
   React.useEffect(() => {
-    Logger('useStands is fetching');
+    Logger('useStands is fetching from' + process.env.REACT_APP_API_URL);
     async function fetchStandsFromBackend() {
       try {
         // Fetch stands data from the backend API

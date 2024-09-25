@@ -7,7 +7,7 @@ export const useToken = (token) => {
   const [tokenData, setTokenData] = React.useState(null);
 
   React.useEffect(() => {
-    Logger('useToken is fetching');
+    Logger('useToken is fetching from' + process.env.REACT_APP_API_URL);
     async function fetchTokenDataFromBackend() {
       try {
         // Fetch token data from the backend API
