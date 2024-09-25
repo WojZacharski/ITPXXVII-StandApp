@@ -10,8 +10,9 @@ export const useStands = () => {
     async function fetchStandsFromBackend() {
       try {
         // Fetch stands data from the backend API
-        // @kerdamon
-          const response = await fetch('https://stand-api.best.krakow.pl/api/fetchReservedStands');
+          // @kerdamon
+          const API_URL = process.env.REACT_APP_API_URL;
+          const response = await fetch('${API_URL}/api/fetchReservedStands');
         if (response.ok) {
           const data = await response.json();
           setStands(data);

@@ -12,7 +12,8 @@ export const useTokens = () => {
       try {
         // Fetch *all* tokens data from the backend API
         // @kerdamon
-          const response = await fetch('https://stand-api.best.krakow.pl/api/fetchTokens');
+          const API_URL = process.env.REACT_APP_API_URL;
+          const response = await fetch(`${API_URL}/api/fetchTokens`);
         if (response.ok) {
           const tokensData = await response.json();
           setTokens(tokensData);

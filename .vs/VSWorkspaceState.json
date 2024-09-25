@@ -2,15 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\backend",
-    "\\app\\backend\\routes",
     "\\app\\frontend",
     "\\app\\frontend\\src",
     "\\app\\frontend\\src\\components",
-    "\\app\\frontend\\src\\components\\admin",
     "\\app\\frontend\\src\\components\\buttons",
-    "\\app\\frontend\\src\\constants"
+    "\\app\\frontend\\src\\configs",
+    "\\app\\frontend\\src\\constants",
+    "\\app\\frontend\\src\\hooks",
+    "\\app\\frontend\\src\\tests",
+    "\\app\\frontend\\src\\utils"
   ],
-  "SelectedNode": "\\app\\frontend\\src\\configs\\map.config.js",
+  "SelectedNode": "\\app\\frontend\\src\\components\\buttons\\PrimaryButton.js",
   "PreviewInSolutionExplorer": false
 }
