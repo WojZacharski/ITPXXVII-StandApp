@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\backend",
+    "\\app\\backend\\routes",
+    "\\app\\frontend",
+    "\\app\\frontend\\src",
+    "\\app\\frontend\\src\\components",
+    "\\app\\frontend\\src\\components\\admin",
+    "\\app\\frontend\\src\\components\\buttons",
+    "\\app\\frontend\\src\\constants"
+  ],
+  "SelectedNode": "\\app\\frontend\\src\\configs\\map.config.js",
+  "PreviewInSolutionExplorer": false
+}
