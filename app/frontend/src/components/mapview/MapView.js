@@ -1,10 +1,15 @@
 import React from 'react';
 import { mapConfig } from "../../configs/map.config";
 import { useLanguageContext } from "../../contexts/LanguageContext";
+import './Map.css'; // Ensure you import the CSS file
+
 
 const ratio = 1;
 
+
+
 export const Map = () => {
+
     const { t } = useLanguageContext();
     console.log('Language Context:', t);
 
@@ -27,32 +32,35 @@ export const Map = () => {
     }
 
     return (
-        <svg width={width} height={height} xmlns="http://www.w3.org/2000/svg"
-             style={{ border: '3px solid orange' }}>
+        <div className="map-container"> {/* Centering container */}
+            <svg width={width} height={height} xmlns="http://www.w3.org/2000/svg"
+                style={{ border: '3px solid orange' }}>
 
-            <defs>
-                <pattern id="background" x="0" y="0" width="1" height="1"
-                         viewBox={`0 0 ${width} ${height}`}>
-                    <image width="100%" height="100%" xlinkHref={''}/>
-                </pattern>
-            </defs>
+                <defs>
+                    <pattern id="background" x="0" y="0" width="1" height="1"
+                        viewBox={`0 0 ${width} ${height}`}>
+                        <image width="100%" height="100%" xlinkHref={''} />
+                    </pattern>
+                </defs>
 
-            <g>
-                <title>{backgroundTitle}</title>
-                <rect fill="url(#background)" id="canvas_background" height={height} width={width} y="-1" x="-1"/>
-                <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-                    <rect fill="url(#gridpattern)" strokeWidth="0" y="0" x="0" height="100%" width="100%"/>
+                <g>
+                    <title>{backgroundTitle}</title>
+                    <rect fill="url(#background)" id="canvas_background" height={height} width={width} y="-1" x="-1" />
+                    <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                        <rect fill="url(#gridpattern)" strokeWidth="0" y="0" x="0" height="100%" width="100%" />
+                    </g>
                 </g>
-            </g>
-            <g>
-                {stands.length > 0 ? (
-                    stands.map((stand, index) => <React.Fragment key={index}>{stand}</React.Fragment>)
-                ) : (
-                    <text x={width / 2} y={height / 2} textAnchor="middle">No stands available</text>
-                )}
-            </g>
-            {walls}
-        </svg>
+                <g>
+                    {stands.length > 0 ? (
+                        stands.map((stand, index) => <React.Fragment key={index}>{stand}</React.Fragment>)
+
+                    ) : (
+                        <text x={width / 2} y={height / 2} textAnchor="middle">No stands available</text>
+                    )}
+                </g>
+                {walls}
+            </svg>
+        </div>
     );
 };
 

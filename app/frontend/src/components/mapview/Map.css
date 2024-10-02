@@ -1,0 +1,13 @@
+/* Map.css */
+.map-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+svg {
+    max-width: 100%; /* Responsive width */
+    max-height: 100%; /* Responsive height */
+}
