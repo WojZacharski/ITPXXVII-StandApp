@@ -6,7 +6,7 @@ const ratio = 1;
 
 export const StandMap = () => {
     const {t} = useLanguageContext();
-    const {stands, backgroundTitle, walls, mapHeight, mapWidth} = mapConfig(t);
+    const { stands, backgroundTitle, walls, mapHeight, mapWidth } = mapConfig(t);
     const width = mapWidth * ratio;
     const height = mapHeight * ratio;
 
@@ -33,3 +33,5 @@ export const StandMap = () => {
         {walls}
     </svg>
 };
+
+export default StandMap;

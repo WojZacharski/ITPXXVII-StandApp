@@ -10,16 +10,23 @@ import { PageResolver } from "./components/PageResolver";
 import { Footer } from "./components/Footer";
 import { CssBaseline } from "@material-ui/core";
 import { Admin } from "./components/admin/Admin";
+import { Map } from "./components/mapview/MapView";
 
-const App = () =>
-    <div className="App">
-        <Router>
-            <Switch>
-                <Route path={ROUTES.ADMIN} component={Admin} />
-                <Route path={ROUTES.LANDING} component={Component} />
-            </Switch>
-        </Router>
-    </div>;
+const App = () => (
+    <DataProvider>  {/* Wrapping the whole app */}
+    <LanguageProvider>  {/* Wrapping the whole app */}
+        <div className="App">
+            <Router>
+                <Switch>
+                    <Route path={ROUTES.ADMIN} component={Admin} />
+                    <Route path={ROUTES.MAP} component={Map} />
+                    <Route path={ROUTES.LANDING} component={Component} />
+                </Switch>
+            </Router>
+        </div>
+        </LanguageProvider>
+</DataProvider>
+);
 
 const Component = (props) => <DataProvider {...props}>
     <LanguageProvider>
