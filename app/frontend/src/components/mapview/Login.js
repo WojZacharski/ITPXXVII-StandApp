@@ -16,7 +16,7 @@ export const Login = () => {
             setErrorMessage('');
             history.push('/map');
         } else {
-            setErrorMessage("Nieprawid³owe has³o.");
+            setErrorMessage("Wrong password.");
         }
     };
 
