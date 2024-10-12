@@ -1,5 +1,5 @@
 import React from 'react';
-import { mapConfig } from "../../configs/map.config";
+import { mapConfig } from "../../configs/maptooltip.config";
 import { useLanguageContext } from "../../contexts/LanguageContext";
 import './Map.css'; // Ensure you import the CSS file
 
