@@ -12,22 +12,26 @@ import { CssBaseline } from "@material-ui/core";
 import { Admin } from "./components/admin/Admin";
 import { Map } from "./components/mapview/MapView";
 import { Login } from "./components/mapview/Login";
+import PrivateRoute from "./constants/routes";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
 
 const App = () => (
+   <AuthProvider>
     <DataProvider>  
     <LanguageProvider>  
         <div className="App">
             <Router>
                 <Switch>
                     <Route path={ROUTES.ADMIN} component={Admin} />
-                    <Route path={ROUTES.MAP} component={Map} />
+                    <PrivateRoute path={ROUTES.MAP} component={Map} />
                     <Route path={ROUTES.LOGIN} component={Login} />
                     <Route path={ROUTES.LANDING} component={Component} />
                 </Switch>
             </Router>
         </div>
         </LanguageProvider>
-</DataProvider>
+        </DataProvider>
+</AuthProvider>
 );
 
 const Component = (props) => <DataProvider {...props}>

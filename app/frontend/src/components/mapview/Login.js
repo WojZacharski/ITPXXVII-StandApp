@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import './login.css'; 
+import { useAuth } from '../../contexts/AuthContext'; 
+import './login.css';
 
 const predefinedPassword = process.env.REACT_APP_PASSWORD;
 
@@ -8,12 +9,14 @@ export const Login = () => {
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const history = useHistory();
+    const { login } = useAuth(); 
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (password === predefinedPassword) {
             setErrorMessage('');
+            login(); 
             history.push('/map');
         } else {
             setErrorMessage("Wrong password.");
@@ -27,7 +30,7 @@ export const Login = () => {
                 <div className="form-group">
                     <label htmlFor="password">Password:</label>
                     <input
-                        type="password" 
+                        type="password"
                         id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
