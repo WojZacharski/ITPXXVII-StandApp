@@ -1,15 +1,15 @@
 import React from 'react';
 import { mapConfig } from "../../configs/maptooltip.config";
 import { useLanguageContext } from "../../contexts/LanguageContext";
+import { useHistory } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 import './Map.css'; // Ensure you import the CSS file
-
 
 const ratio = 1;
 
-
-
 export const Map = () => {
-
+    const { isAuthenticated } = useAuth();
+    const history = useHistory();
     const { t } = useLanguageContext();
     console.log('Language Context:', t);
 
@@ -19,6 +19,10 @@ export const Map = () => {
     // Calculate width and height
     const width = mapWidth * ratio;
     const height = mapHeight * ratio;
+
+    const goToAdmin = () => {
+        history.push('/hasiok69'); // Redirects to the Admin page
+    };
 
     // Debugging logs
     console.log('Map Config:', mapConfig);
@@ -53,13 +57,15 @@ export const Map = () => {
                 <g>
                     {stands.length > 0 ? (
                         stands.map((stand, index) => <React.Fragment key={index}>{stand}</React.Fragment>)
-
                     ) : (
                         <text x={width / 2} y={height / 2} textAnchor="middle">No stands available</text>
                     )}
                 </g>
                 {walls}
             </svg>
+            {isAuthenticated && (
+                <button onClick={goToAdmin} className="admin-button">Go to Admin</button>
+            )}
         </div>
     );
 };

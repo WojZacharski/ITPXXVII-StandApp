@@ -7,7 +7,7 @@ export const useTokens = () => {
   const [tokens, setTokens] = React.useState([]);
 
   React.useEffect(() => {
-    Logger('useTokens is fetching from' + process.env.REACT_APP_API_URL);
+    //Logger('useTokens is fetching from' + process.env.REACT_APP_API_URL);
     async function fetchTokensFromAPI() {
       try {
         // Fetch *all* tokens data from the backend API

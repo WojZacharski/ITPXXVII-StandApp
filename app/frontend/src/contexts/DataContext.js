@@ -46,7 +46,7 @@ class DataProvider extends Component {
 
         try {
 
-            Logger('Fetching token data from ' + API_URL);
+            Logger('Fetching token data from API');
             // @kerdamon
             const tokenDataResponse = await fetch(`${API_URL}/api/fetchData/${this.token}`);
             if (tokenDataResponse.ok) {
@@ -55,7 +55,7 @@ class DataProvider extends Component {
             } else {
                 this.setState({ wrongToken: true });
             }
-            Logger('Fetching reserved stands data from ' + API_URL);
+            Logger('Fetching reserved stands data from API');
             // @kerdamon
             const reservedStandsResponse = await fetch(`${API_URL}/api/fetchReservedStands`);
             if (reservedStandsResponse.ok) {
@@ -66,7 +66,7 @@ class DataProvider extends Component {
                 console.error('Error fetching reserved stands data:', reservedStandsResponse.statusText);
             }
         } catch (error) {
-            console.error('Error fetching data from ' + API_URL, error);
+            console.error('Error fetching data from API', error);
         }
     };
 
@@ -90,7 +90,7 @@ class DataProvider extends Component {
         const { id } = this.state;
         const API_URL = process.env.REACT_APP_API_URL;
         try {
-            Logger('Saving stand choice to ' + API_URL);
+            Logger('Saving stand choice to API');
             // @kerdamon
             const response = await fetch(`${API_URL}/api/saveData`, {
                 method: 'POST',

@@ -3,6 +3,7 @@
     display: flex; /* Use flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack SVG and button vertically */
     height: 100vh; /* Full viewport height */
     margin: 0; /* Remove default margin */
 }
@@ -11,3 +12,25 @@ svg {
     max-width: 100%; /* Responsive width */
     max-height: 100%; /* Responsive height */
 }
+
+.admin-button {
+    margin-top: 20px; /* Space between SVG and button */
+    padding: 10px 20px; /* Padding for better click area */
+    background-color: #FF6F00; /* Orange background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Larger text */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+    .admin-button:hover {
+        background-color: #FF8F00; /* Lighter orange on hover */
+    }
+
+    .admin-button:active {
+        transform: scale(0.98); /* Slightly shrink on click */
+    }

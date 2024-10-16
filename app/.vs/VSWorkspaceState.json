@@ -1,13 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\backend",
+    "\\backend\\config",
+    "\\backend\\controllers",
+    "\\backend\\routes",
     "\\frontend",
     "\\frontend\\src",
     "\\frontend\\src\\components",
     "\\frontend\\src\\components\\mapview",
-    "\\frontend\\src\\constants",
-    "\\frontend\\src\\contexts"
+    "\\frontend\\src\\hooks"
   ],
-  "SelectedNode": "\\frontend\\src\\components\\mapview\\login.css",
+  "SelectedNode": "\\frontend\\src\\constants",
   "PreviewInSolutionExplorer": false
 }

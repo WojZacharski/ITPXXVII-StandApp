@@ -22,9 +22,9 @@ const App = () => (
         <div className="App">
             <Router>
                 <Switch>
-                    <Route path={ROUTES.ADMIN} component={Admin} />
-                    <PrivateRoute path={ROUTES.MAP} component={Map} />
                     <Route path={ROUTES.LOGIN} component={Login} />
+                    <PrivateRoute path={ROUTES.ADMIN} component={Admin} />
+                    <PrivateRoute path={ROUTES.MAP} component={Map} />                 
                     <Route path={ROUTES.LANDING} component={Component} />
                 </Switch>
             </Router>
