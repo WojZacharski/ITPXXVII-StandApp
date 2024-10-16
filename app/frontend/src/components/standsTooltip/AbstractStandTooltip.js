@@ -1,4 +1,7 @@
-﻿import React from 'react';
+﻿//Used as basic template for stand component in maptooltip.config.js
+//Allows for tooltin with company name to be displayed on hover over stand
+
+import React from 'react';
 import { useDataContext } from "../../contexts/DataContext";
 import { useLanguageContext } from "../../contexts/LanguageContext";
 import { makeStyles } from "@material-ui/core";

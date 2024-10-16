@@ -32,37 +32,37 @@ export const mapConfig = (t) => ({
         <Rectangle x="470" y="300" width={80} height={20} text={t("ENTRANCE").toUpperCase()} fill={lightBlue['500']}/>,
 
         // LEFT SIDE
-        <StandS id="L19" x="430" y="230" />,
-        <Stand8 id="L18" x="250" y="230" />,
-        <Stand4 id="L17" x="210" y="255" />,
-        <Stand6 id="L16" x="180" y="255" />, 
-        <Stand4 id="L15" x="80" y="200" />, 
-        <Stand6 id="L14" x="100" y="180"/>,
-        <StandS id="L13" x="130" y="180" />, //sponsor
-        <Stand6 id="L12" x="210" y="180"/>,
-        <Stand4 id="L11" x="240" y="180" reversed/>,
-        <Stand4 id="L10" x="240" y="160" reversed />,
-        <Stand6 id="L9" x="240" y="130" reversed />, //nowe
-        <Stand4 id="L8" x="240" y="110" reversed/>,
-        <Stand4 id="L7" x="240" y="90" reversed/>,
-        <Stand6 id="L6" x="260" y="70"/>,
-        <Stand6 id="L5" x="290" y="70"/>,
-        <Stand4 id="L4" x="320" y="70"/>,
-        <Stand4 id="L3" x="360" y="70"/>,
-        <Stand6 id="L2" x="380" y="70"/>,
         <Stand6 id="L1" x="410" y="70" />,
+        <Stand6 id="L2" x="380" y="70" />,
+        <Stand4 id="L3" x="360" y="70" />,
+        <Stand4 id="L4" x="320" y="70" />,
+        <Stand6 id="L5" x="290" y="70" />,
+        <Stand6 id="L6" x="260" y="70" />,
+        <Stand4 id="L7" x="240" y="90" reversed />,
+        <Stand4 id="L8" x="240" y="110" reversed />,
+        <Stand6 id="L9" x="240" y="130" reversed />, 
+        <Stand4 id="L10" x="240" y="160" reversed />,
+        <Stand4 id="L11" x="240" y="180" reversed />,
+        <Stand6 id="L12" x="210" y="180" />,
+        <StandS id="L13" x="130" y="180" />, //sponsor
+        <Stand6 id="L14" x="100" y="180" />,
+        <Stand4 id="L15" x="80" y="200" />, 
+        <Stand6 id="L16" x="180" y="255" />, 
+        <Stand4 id="L17" x="210" y="255" />,
+        <Stand8 id="L18" x="250" y="230" />,
+        <StandS id="L19" x="430" y="230" />,
 
         // MIDDLE-LEFT SIDE
-        <StandS id="S5" x="300" y="140" reversed/>, //sponsor
-        <Stand4 id="S4" x="320" y="140"/>,
-        <Stand4 id="S6" x="320" y="160"/>,
-        <Stand8 id="S3" x="340" y="140"/>,
-        <Stand8 id="S7" x="340" y="160"/>,
-        <Stand6 id="S2" x="380" y="140"/>,
-        <Stand6 id="S8" x="380" y="160"/>,
-        <StandS id="S1" x="410" y="140" reversed/>, //sponsor
-        
 
+        <StandS id="S1" x="410" y="140" reversed />, //sponsor
+        <Stand6 id="S2" x="380" y="140" />,
+        <Stand8 id="S3" x="340" y="140" />,
+        <Stand4 id="S4" x="320" y="140" />,
+        <StandS id="S5" x="300" y="140" reversed />, //sponsor
+        <Stand4 id="S6" x="320" y="160" />,
+        <Stand8 id="S7" x="340" y="160" />,
+        <Stand6 id="S8" x="380" y="160" />,
+        
         // MIDDLE
         <StandMS id="SG" x="580" y="110"/>,
         <Rectangle x="520" y="110" 
@@ -70,17 +70,16 @@ export const mapConfig = (t) => ({
         text={t("BEST").toUpperCase()} 
         fill={lightBlue['500']}/>,
 
-
         // MIDDLE-RIGHT SIDE
         <StandS id="S9" x="680" y="140" reversed/>, //sponsor
-        <Stand6 id="S10" x="700" y="140"/>,
-        <Stand6 id="S17" x="700" y="160"/>,
-        <Stand4 id="S11" x="730" y="140"/>,
-        <Stand8 id="S16" x="730" y="160"/>,
+        <Stand6 id="S10" x="700" y="140"/>,       
+        <Stand4 id="S11" x="730" y="140"/>,       
         <Stand4 id="S12" x="750" y="140"/>,
-        <Stand6 id="S13" x="770" y="140"/>,
-        <Stand6 id="S15" x="770" y="160"/>,
+        <Stand6 id="S13" x="770" y="140"/>,        
         <StandS id="S14" x="800" y="140" reversed/>, //sponsor
+        <Stand6 id="S15" x="770" y="160" />,
+        <Stand8 id="S16" x="730" y="160" />,
+        <Stand6 id="S17" x="700" y="160" />,
 
         // RIGHT SIDE
         <Stand6 id="P1" x="665" y="70"/>,
@@ -99,12 +98,11 @@ export const mapConfig = (t) => ({
         <Stand8 id="P14" x="945" y="180"/>,
         <Stand6 id="P15" x="985" y="180" />,
         <Stand6 id="P16" x="1015" y="180" />,
+        <StandPPS id="P17" x="1105" y="185" reversed/>, //partner strefy studenta
+        <Stand4 id="P18" x="1030" y="255" />, 
+        <Stand6 id="P19" x="860" y="255" />,
+        <Stand4 id="P20" x="840" y="255" />,
+        <Stand6 id="P21" x="610" y="232" />,
 
-        <StandPPS id="P17" x="1105" y="185" reversed/>,
-
-        <Stand6 id="P21" x="610" y="232"/>,
-        <Stand4 id="P20" x="840" y="255"/>,
-        <Stand6 id="P19" x="860" y="255"/>,
-        <Stand4 id="P18" x="1030" y="255"/>,  
     ]
 });
