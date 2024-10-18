@@ -8,7 +8,7 @@ import { StandS } from "../components/standsTooltip/StandS";
 import { StandMS } from "../components/standsTooltip/StandMS";
 import { StandPPS } from "../components/standsTooltip/StandPPS";
 import { Rectangle } from "../components/standsTooltip/Rectangle";
-import { grey, lightBlue, orange } from "@material-ui/core/colors";
+import { grey, lightBlue, orange} from "@material-ui/core/colors";
 
 //Copy mapConfig function from frontend/src/configs/map.config.js after stand map modification
 
@@ -54,7 +54,7 @@ export const mapConfig = (t) => ({
         <Stand6 id="L16" x="180" y="255" />,
         <Stand4 id="L17" x="210" y="255" />,
         <Stand8 id="L18" x="250" y="230" />,
-        <StandS id="L19" x="430" y="230" />,
+        <StandS id="L19" x="430" y="230" />, //sponsor
 
         // MIDDLE-LEFT SIDE
 
@@ -108,5 +108,8 @@ export const mapConfig = (t) => ({
         <Stand4 id="P20" x="840" y="255" />,
         <Stand6 id="P21" x="610" y="232" />,
 
+        <Rectangle x="630" y="270" width={70} height={30} text={t("FOTOGRAF").toUpperCase()} fill="#3f51b5" />,
+
+        <Rectangle x="900" y="255" width={60} height={25} text={t("CV").toUpperCase()} fill="#8B8000" fontSize={7} />,
     ]
 });
