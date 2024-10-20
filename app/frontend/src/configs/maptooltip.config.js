@@ -99,8 +99,8 @@ export const mapConfig = (t) => ({
         <Stand4 id="P11" x="855" y="180" reversed />,
         <Stand6 id="P12" x="875" y="180" />,
         <StandS id="P13" x="905" y="180" />, //sponosr
-        <Stand8 id="P14" x="945" y="180" />,
-        <Stand6 id="P15" x="985" y="180" />,
+        <Stand8 id="P14" x="975" y="180" />,
+        <Stand6 id="P15" x="945" y="180" />,
         <Stand6 id="P16" x="1015" y="180" />,
         <StandPPS id="P17" x="1105" y="185" reversed />, //partner strefy studenta
         <Stand4 id="P18" x="1030" y="255" />,
